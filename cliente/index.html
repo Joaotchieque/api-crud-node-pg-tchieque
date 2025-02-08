@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente App</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<nav class="navbar navbar-light bg-dark">
+    <a href="#" style="text-decoration: none; color: white;">App Client JS</a>
+    <a href="#" style="text-decoration: none; color: white;"> Criado: por João Tchieque Eng. Informático</a>
+</nav>
+<body>
+    <div class="container">
+        <div class="row pt-5" >
+        <div class="col-md-4">
+           
+            <div class="card">
+                <div class="card-header">
+                    <h4>Adicionar Artigo</h4>
+                </div>
+                <form >
+                    <div class="card-body">
+                        <div class="form-control">
+                            <input class="form-control" type="text"  id="titulo" placeholder="Título do artigo">
+                        </div>
+                        <div class="form-control">
+                        <textarea class="form-control" id="conteudo" rows="3" placeholder="Conteúdo do artigo"></textarea>
+                        </div>
+                        <div class="form-control">
+                        <input class="form-control" type="text" id="autor" placeholder="Nome do autor: ">
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="addArtigos()">Adicionar</button>
+                    </div>
+                </form>
+            </div> 
+        </div>
+        <div class="col-md-8">
+            <h4>Artigos Existentes</h4>
+            <table class="table table-bordred table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Título</th>
+                        <th>Coteúdo</th>
+                        <th>Autor</th>
+                        <th>Criado</th>
+                        <th>Operações</th>
+                    </tr>
+                </thead>
+                <tbody id="resultado">
+
+                </tbody>
+            <table>
+        </div>
+    </div>
+</div>
+
+<div id="editModal" class="modal"  >
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times</span>
+        <form id="editForm">
+            <input type="hidden" id="editId">
+            <input type="text" id="editTitulo" placeholder="Título: " required>
+            <input type="text" id="editConteudo" placeholder="Conteúdo:" required>
+            <input type="text" id="editAutor" placeholder="Autor: " required>
+            <button type="submit" >Atualizar</button>
+        </form>
+    </div>
+</div>
+        
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+
+
+
